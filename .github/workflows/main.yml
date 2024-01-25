@@ -43,10 +43,8 @@ jobs:
         run: |
           cd ./simple-api  
           mvn clean install
-          mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=MatteoVALENTINI_TP1takima
-
+          mvn clean verify sonar:sonar
         env:
-
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
 
