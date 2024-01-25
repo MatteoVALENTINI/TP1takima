@@ -24,18 +24,11 @@
         <validation.version>2.0.1.Final</validation.version>
     </properties>
 
-    <!-- ... (dependencies) ... -->
+    <!-- ... (vos dépendances et autres configurations) ... -->
 
     <build>
         <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-failsafe-plugin</artifactId>
-            </plugin>
+            <!-- ... (autres plugins) ... -->
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
@@ -53,4 +46,11 @@
                         <id>post-unit-test</id>
                         <phase>test</phase>
                         <goals>
-                            <goal>report</
+                            <goal>report</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>
