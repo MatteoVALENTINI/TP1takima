@@ -41,12 +41,9 @@ jobs:
       - name: Build and test with Maven
 
         run: |
-
           cd ./simple-api  
-
           mvn clean install
-
-          mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=bribrix_devops-livecoding
+          mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=MatteoVALENTINI_TP1takima
 
         env:
 
