@@ -1,6 +1,5 @@
 name: CI devops 2023
 on:
-  # Déclenche le workflow pour les push et pull requests sur les branches main et develop
   push:
     branches: [ main, develop ]
   pull_request:
@@ -10,17 +9,17 @@ jobs:
   test-backend:
     runs-on: ubuntu-22.04
     steps:
-      # Vérifie le code de votre dépôt GitHub
-      - uses: actions/checkout@v2.5.0
+      # Mise à jour de actions/checkout pour utiliser une version compatible avec Node 16
+      - uses: actions/checkout@v3
 
-      # Configure JDK 17 à l'aide de actions/setup-java
+      # Configuration de JDK 17
       - name: Set up JDK 17
         uses: actions/setup-java@v3
         with:
           java-version: '17'
           distribution: 'adopt'
 
-      # Construire et tester votre application avec Maven
+      # Construction et test de l'application avec Maven
       - name: Build and test with Maven
         run: mvn clean verify
-        # Assurez-vous que le chemin vers votre fichier pom.xml est correct si vous n'exécutez pas cette commande à la racine de votre projet
+        # Assurez-vous que le chemin vers votre fichier pom.xml est correct
