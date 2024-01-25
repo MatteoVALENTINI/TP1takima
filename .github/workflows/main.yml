@@ -40,4 +40,4 @@ jobs:
           context: .
           file: Dockerfile
           push: true
-          tags: votre_user_dockerhub/votre_image:tag
+          tags: matteoovalentini/takima:tag
