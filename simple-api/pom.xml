@@ -16,12 +16,13 @@
     <description>Simple API demo project for Spring Boot</description>
 
     <properties>
+		<sonar.organization>MatteoVALENTINI</sonar.organization>
+		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
+		<sonar.branch.name>main</sonar.branch.name>
         <java.version>17</java.version>
         <jacoco-maven-plugin.version>0.8.8</jacoco-maven-plugin.version>
         <testcontainers.version>1.17.4</testcontainers.version>
         <validation.version>2.0.1.Final</validation.version>
-        <sonar.organization>matteovalentini</sonar.organization>
-        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
     </properties>
 
     <dependencies>
