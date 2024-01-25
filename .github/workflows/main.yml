@@ -20,5 +20,5 @@ jobs:
       # Assurez-vous que cette étape est exécutée dans le répertoire contenant votre fichier pom.xml
       - name: Build and test with Maven
         run: |
-          cd chemin/vers/le/dossier/contenant/pom.xml
-          mvn clean verify
+        C:\Users\33624\TP1takima\simple-api\pom.xml
+        mvn clean verify
