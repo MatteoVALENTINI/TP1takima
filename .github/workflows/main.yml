@@ -9,17 +9,16 @@ jobs:
   test-backend:
     runs-on: ubuntu-22.04
     steps:
-      # Mise à jour de actions/checkout pour utiliser une version compatible avec Node 16
       - uses: actions/checkout@v3
 
-      # Configuration de JDK 17
       - name: Set up JDK 17
         uses: actions/setup-java@v3
         with:
           java-version: '17'
           distribution: 'adopt'
 
-      # Construction et test de l'application avec Maven
+      # Assurez-vous que cette étape est exécutée dans le répertoire contenant votre fichier pom.xml
       - name: Build and test with Maven
-        run: mvn clean verify
-        # Assurez-vous que le chemin vers votre fichier pom.xml est correct
+        run: |
+          cd chemin/vers/le/dossier/contenant/pom.xml
+          mvn clean verify
